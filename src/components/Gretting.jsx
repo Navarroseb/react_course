@@ -6,9 +6,7 @@ const Gretting = ({ text, children }) => {
 
     return (
         <>
-            <h1>
-                {text}          
-            </h1>
+            <h1 className='title'>{text ? text : "hi"}</h1>
             {children}
         </>
     )
