@@ -9,8 +9,8 @@ function Users({usersList}) {
     {usersList.map(function (oneUser){
         return (
             <li>
-                <h3>{`${oneUser.first_name} ${oneUser.last_name}`}</h3>
-                <a href={oneUser.email}>{oneUser.email}</a>
+                <h3>{`${oneUser.id} - ${oneUser.first_name} ${oneUser.last_name}`}</h3>
+                <a href={`mailto:${oneUser.email}`}>{oneUser.email}</a>
             </li>
         )
             
