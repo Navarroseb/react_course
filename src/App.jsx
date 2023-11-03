@@ -1,22 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import Gretting from './components/Gretting'
-import Button from './components/Button'
+
+
+import USERS_DATA from "./data//users.json";
+import Users from './components/Users';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+    return (
     <>
-     <Gretting text="Hola Sebastian" isBigger={true}/>     
-     <Button text="Click me" />
-     <Gretting text="Hello World">
-        <hr />
-        <strong>I'm a children tag</strong>
-        <h5>Children h5</h5>
-      </Gretting>   
+     <Gretting text="Trabajando con React!"/>
+     <Users usersList={USERS_DATA} />
     </>
-  )
+  );
 }
 
 export default App
