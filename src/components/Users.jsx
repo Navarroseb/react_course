@@ -1,8 +1,22 @@
 import React from 'react'
 
-function Users() {
+function Users({usersList}) {
+    
   return (
+    <> 
     <h3>Users List</h3>
+    <ul>
+    {usersList.map(function (oneUser){
+        return (
+            <li>
+                <h3>{`${oneUser.first_name} ${oneUser.last_name}`}</h3>
+                <a href={oneUser.email}>{oneUser.email}</a>
+            </li>
+        )
+            
+    })}
+    </ul>
+    </>
   )
 }
 
