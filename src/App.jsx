@@ -10,7 +10,7 @@ import Users from './components/Users';
 function App() {
     return (
     <>
-     <Gretting text="Trabajando con React!"/>
+     <Gretting text={"Hola!"}/>
      <Users usersList={USERS_DATA} />
     </>
   );

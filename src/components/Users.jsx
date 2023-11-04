@@ -1,4 +1,5 @@
-import React from 'react'
+import PropTypes from "prop-types";
+
 
 function Users({usersList}) {
     
@@ -18,6 +19,10 @@ function Users({usersList}) {
     </ul>
     </>
   )
+}
+
+Users.protoTypes = {
+  usersList: PropTypes.array,
 }
 
 export default Users

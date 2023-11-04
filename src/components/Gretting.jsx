@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from "prop-types";
 
 const Gretting = ({ text, children }) => {
     console.log(children);
@@ -10,6 +10,10 @@ const Gretting = ({ text, children }) => {
             {children}
         </>
     )
+}
+
+Gretting.propTypes = {
+    text: PropTypes.string
 }
 
 export default Gretting;
