@@ -1,4 +1,4 @@
-/* class Persona {
+ class Persona {
     constructor(name, surname) {
         this.firstName = name;
         this.lastName = surname;
@@ -22,13 +22,7 @@ class Estudiante extends Persona {
 const sebas = new Estudiante("Sebas", "Navarro", "sebasnavarro@asd.com")
 console.log(sebas)
 
- */
 
 
-let x = 10
-let sum = 0
-while (x>3){
-    sum = sum + x
-    x = x-2
-    console.log(sum)
-}
+
+
