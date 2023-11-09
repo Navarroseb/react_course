@@ -13,7 +13,7 @@ function App() {
     return (
     <>
      <Gretting text={"Hola!"}/>
-     <Counter />
+     <Counter subject="React" developerName="Jane"/>
      <Users usersList={USERS_DATA} />
     </>
   );
