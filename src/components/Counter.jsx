@@ -22,7 +22,23 @@ class Counter extends Component {
     }
 
     increment(){
-        console.log("Vamos a incrementar el value")
+        const actualValue = this.state.initialValue;
+        if (actualValue === 15){
+            console.log("Llegamos a 15")
+            console.log("Dejamos de sumar")
+            return;
+
+        }
+        this.setState({ initialValue: actualValue + 1 })
+    }
+
+    decrement(){
+        const actualValue = this.state.initialValue;
+        if(actualValue === 0){
+            console.log("No puedes setar el valor en menos de 0")
+            return;
+        }
+        this.setState({ initialValue: actualValue - 1 })
     }
 
 
@@ -35,7 +51,9 @@ class Counter extends Component {
                 <hr />
                 <h2>Contador</h2>
                 <p>El valor del contador es: <strong>{initialValue}</strong></p>
-                <button onClick={this.increment} >Incrementar</button>
+                <button onClick={() => this.increment()} >Incrementar</button>
+                <button onClick={() => this.decrement()} >Restamos</button>
+
                 <em>El developer es: {developer} y le encanta programar en {subject}</em>
                 <hr />
             </>
