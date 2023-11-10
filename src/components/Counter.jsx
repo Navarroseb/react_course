@@ -4,7 +4,7 @@ class Counter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            initialValue: 10,
+            initialValue: 0,
             developer: this.props.developerName
         }
     }
@@ -21,6 +21,10 @@ class Counter extends Component {
         console.log("%c Se desmonto el componente ", "background: blue")
     }
 
+    increment(){
+        console.log("Vamos a incrementar el value")
+    }
+
 
     render() {
         const {initialValue, developer} = this.state;
@@ -31,6 +35,7 @@ class Counter extends Component {
                 <hr />
                 <h2>Contador</h2>
                 <p>El valor del contador es: <strong>{initialValue}</strong></p>
+                <button onClick={this.increment} >Incrementar</button>
                 <em>El developer es: {developer} y le encanta programar en {subject}</em>
                 <hr />
             </>
