@@ -41,6 +41,10 @@ class Counter extends Component {
         this.setState({ initialValue: actualValue - 1 })
     }
 
+    changeDeveloperName(name){
+        this.setState({ developer: name});
+    }
+
 
     render() {
         const {initialValue, developer} = this.state;
@@ -53,6 +57,8 @@ class Counter extends Component {
                 <p>El valor del contador es: <strong>{initialValue}</strong></p>
                 <button onClick={() => this.increment()} >Incrementar</button>
                 <button onClick={() => this.decrement()} >Restamos</button>
+                <button onClick={() => this.changeDeveloperName("Peter")} >Cambiar nombre del developer</button>
+
 
                 <em>El developer es: {developer} y le encanta programar en {subject}</em>
                 <hr />
