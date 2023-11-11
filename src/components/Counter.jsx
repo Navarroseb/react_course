@@ -55,7 +55,7 @@ class Counter extends Component {
                 <hr />
                 <h2>Contador</h2>
                 <p>El valor del contador es: <strong>{initialValue}</strong></p>
-                <button onClick={() => this.increment()} >Incrementar</button>
+                <button onMouseOver={() => this.increment()} >Incrementar</button>
                 <button onClick={() => this.decrement()} >Restamos</button>
                 <button onClick={() => this.changeDeveloperName("Peter")} >Cambiar nombre del developer</button>
 
