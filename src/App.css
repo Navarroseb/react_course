@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.testing-title {
+  background-color: salmon;
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}

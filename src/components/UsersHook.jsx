@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import UserData from "./UserData";
 
 const UsersHook = () => {
     const [usersList, setUsersList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const title = useRef(null);
 
     const [value, setValue] = useState(0);
 
@@ -16,15 +17,26 @@ const UsersHook = () => {
             setIsLoading(false);
                       
         })();
-    }, []);
+        
+    }, []); 
+
+    const changeTitleHandler = () => {
+        title.current.classList.add("testing-title")
+        
+
+    }
+
+    console.log(title)
 
     
     
     return (
         <>
-            <h3>Users List</h3>
+            <h3 ref={title}>Users List</h3>
             
-            {isLoading && <h4>Cargando...</h4>}
+            <button onClick={changeTitleHandler}>Cambir el title</button>
+
+            {isLoading && <h4>Cargando... </h4>}
 
                {!isLoading && (
                 <ul>
