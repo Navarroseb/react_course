@@ -9,23 +9,23 @@ import TodoList from './components/TodoList/TodoList';
 const initialState = [];
 
 const todosReducer = (state, action) => {
-    switch (action.type) {
-      case "add":
-        return [...state, action.payload];
-      default:
-        return state;  
-    }
+  switch (action.type) {
+    case "add":
+      return [...state, action.payload];
+    default:
+      return state;
+  }
 }
 
 
 
 function App() {
-  const [todoList, dispatch] = useReducer(todosReducer, initialState);
+  const [todoListState, dispatch] = useReducer(todosReducer, initialState);
 
-  console.log(todoList);
+  console.log(todoListState)
 
   const addTask = () => {
-    dispatch({ 
+    dispatch({
       type: "add",
       payload: {
         name: "Estudiar React",
@@ -34,12 +34,12 @@ function App() {
     })
   }
 
-    return (
+  return (
     <>
-     <Gretting text={"Hola!"}/>
-     <button onClick={addTask}>Agregar Tarea</button>
-     {/* <Form/>
-     <TodoList /> */}
+      <Gretting text={"Hola!"} />
+      <button onClick={addTask}>Agregar Tarea</button>
+      <Form />
+      <TodoList todoList={todoListState} />
     </>
   );
 }
