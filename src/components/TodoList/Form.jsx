@@ -6,11 +6,7 @@ const Form = ({ addTask }) => {
       e.preventdefault()
   }
 
-  const changeColor = () => {
-    if (icon === Black){
-      return white
-    }
-  }
+ 
 
   return (
     <form onSubmit={submitHandler}>
