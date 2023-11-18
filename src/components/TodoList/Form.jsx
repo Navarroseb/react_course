@@ -1,8 +1,19 @@
 import React from 'react'
 
-const Form = () => {
+const Form = ({ addTask }) => {
+
+  const submitHandler = (e) => {
+      e.preventdefault()
+  }
+
+  const changeColor = () => {
+    if (icon === Black){
+      return white
+    }
+  }
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
         <input type="text" />
         <button type='submit'>Agregar</button>
     </form>

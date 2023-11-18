@@ -24,11 +24,11 @@ function App() {
 
   console.log(todoListState)
 
-  const addTask = () => {
+  const addTaskHandler = (text) => {
     dispatch({
       type: "add",
       payload: {
-        name: "Estudiar React",
+        name: text,
         date: new Date().toLocaleDateString(),
       }
     })
@@ -37,8 +37,8 @@ function App() {
   return (
     <>
       <Gretting text={"Hola!"} />
-      <button onClick={addTask}>Agregar Tarea</button>
-      <Form />
+      <button onClick={addTaskHandler}>Agregar Tarea</button>
+      <Form addTask={addTaskHandler}/>
       <TodoList todoList={todoListState} />
     </>
   );
