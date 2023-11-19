@@ -12,6 +12,8 @@ const Form = ({ addTask }) => {
     <form onSubmit={submitHandler}>
         <input type="text" />
         <button type='submit'>Agregar</button>
+        <button type='btn'>Cambiar</button>
+
     </form>
   )
 }
