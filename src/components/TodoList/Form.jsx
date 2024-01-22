@@ -1,18 +1,18 @@
-import React from 'react'
+import {useState} from 'react'
 
 const Form = ({ addTask }) => {
-
+  const [inputText, setInputText] = useState("");
+  
   const submitHandler = (e) => {
-      e.preventdefault()
+      e.preventdefault();
+      addTask(inputText)
   }
 
- 
-
   return (
-    <form onSubmit={submitHandler}>
-        <input type="text" />
+    <form onSubmit={e => submitHandler(e)}>
+        <input type="text" onChange={e => setInputText(e.currentTarget.value)}/>
         <button type='submit'>Agregar</button>
-        <button type='btn'>Cambiar</button>
+        
 
     </form>
   )
